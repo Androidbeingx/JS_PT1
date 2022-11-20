@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv='cache-control' content='no-cache'>
+	<meta name="author" content="Andrea Morales Mata">
+	<meta http-equiv='expires' content='0'>
+	<meta http-equiv='pragma' content='no-cache'>
+    <title>AIRPROVEN</title>
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="./js/main.js"></script>
+	
+    <!-- web -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+	<!-- Custom stlylesheet -->
+	<link rel="stylesheet" href="./css/main.css">
+	
+</head>
+<body>
+    <!-- TOPNAV -->
+    <div class="topnav">
+		<input  type="button" id="btho" value="Home">
+		<input  type="button" id="btfl" value="Buscar Vols" >
+		<input type="button"  id="btout" value="Logout" >
+		<p id="hora"></p>
+    </div>
+    <!-- MAIN CONTINGUT -->
+	<!-- BIENVENIDA COOKIE -->
+	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+		<div class="w3-display-middle" style="white-space:nowrap;">
+		  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">BENVINGUT <span class="w3-hide-small" id="cookie">DE NOU</span>
+		</div>
+	  </div>
+	<!-- BUSCAR VUELOS -->
+		<div id="buscador" class="w3-animate-opacity">
+			<div class="section-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="booking-cta">
+								<h1>Reserva el teu vol avui</h1>
+								<p>Gràcies per confiar en nosaltres! Esperem que tinguis un bon viatge :)<br>Només treballem en viatges d'anada i tonada.</p>
+							</div>
+						</div>
+						<div class="col-md-7 col-md-offset-1">
+							<div class="booking-form">
+								
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<span class="form-label">Origen</span>
+												<select class="form-control" id="selecto"required>
+												</select>
+												<span class="select-arrow"></span>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<span class="form-label">Destí</span>
+												<select class="form-control" id="selectd" required>
+												</select>
+												<span class="select-arrow"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<span class="form-label">Anada</span>
+												<input class="form-control" type="date" id="calendara" required>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<span class="form-label">Tornada</span>
+												<input class="form-control" type="date" id="calendart" required>
+											</div>
+										</div>
+									</div>
+									<div id="passatgers" >								
+										<div style="display: flex; align-items: center; justify-content: center;">
+											<div class="col-md-6">
+												<div class="form-group" >
+													<span class="form-label">Passatgers</span>
+													<select class="form-control" id="numpass"  required>
+														<option>1</option>
+														<option selected>2</option>
+														<option>3</option>
+													</select>
+													<span class="select-arrow"></span>
+												</div>
+											</div>
+										</div>	
+									</div>
+									<div class="form-btn">
+										<button class="submit-btn" id="btvol" disabled>Vols disponibles</button>
+									</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+    <!--INTERACTIVE LOADER  -->
+    <div id="carregant">
+        <div id="loader" ></div><br><br>
+        <p id="myDiv"></p>
+    </div>
+		<!-- HORARIOS -->
+		<div id="vuelos" class="w3-animate-opacity" class="centerdiv">
+			<div class="backtable">
+				<div id="tablavuelos">
+				</div>
+			</div>
+		</div>
+		<!-- FORM DATA BILL -->
+		<div id="data" class="w3-animate-opacity" class="centerdiv">
+			<div id="formdata">
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

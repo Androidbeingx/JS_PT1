@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrea Morales Mata">
+    <title>AIRPROVEN</title>
+        <!-- web -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="./js/nav.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/registre.js"></script>
+</head>
+<body>
+    <!-- TOPNAV -->
+    <div class="topnav">
+        <input  type="button" id="btho1" value="Home">
+        <input type="button"  id="btlog" value="Login" >
+        <input  type="button" id="btre" value="Registre" >
+        <p id="hora"></p>
+    </div>
+    <!-- HOME -->
+	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home1">
+		<div class="w3-display-middle" style="white-space:nowrap;">
+		  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-hide-small">AIRPROVEN</span>
+		</div>
+	  </div>
+    <!--LOGIN-->
+    <div id="login" class="w3-animate-opacity">
+        <form action="post" method="post" class="container">
+            <h1 class="a font-effect-shadow-multiple">Hola de nou viatger!</h1>
+            <fieldset>
+            <label for="username">Usuari: </label>
+            <input type="text" id="username" required><br><br>
+            <label for="contra">Contrasenya: </label>
+            <input type="password" id="contra" required>
+            <button type="button" id="valida" class="buttonf">Valida</button>
+            </fieldset>
+        </form><br><br>
+        <div id="response" class="response container"></div>
+    </div>
+    <!--REGISTER-->
+    <div id="registre" class="w3-animate-opacity">
+        <form action="post" method="post" class="container">
+            <h1 class="a font-effect-shadow-multiple">Benvingut viatger!</h1>
+            <fieldset>
+                <label for="nom">Nom: </label>
+                <input type="text" id="nom" placeholder="Pep">
+                <div id="errorN" class="danger" required></div><br>
+                <label for="cognoms">Cognoms: </label>
+                <input type="text" id="cognoms"placeholder="Oliver Tries" required>
+                <div id="errorC" class="danger"></div><br>
+                <label for="usernamer">Usuari: </label>
+                <input type="text" id="usernamer" placeholder="Pep-oliver, pepoliver ..." required>
+                <div id="errorU" class="danger" ></div><br>
+                <label for="password1">Contrasenya: </label>
+                <input type="password" id="password1" required>
+                <div id="errorP" class="danger"></div><br>
+                <label for="password2">Repeteix Contrasenya: </label>
+                <input type="password" id="password2" required>
+                <div id="errorP1" class="danger"></div><br>
+                <button type="button" id="registra" class="buttonf" disabled>Registra</button>
+            </fieldset>
+        </form><br><br>
+        <div id="response2" class="response container"></div>
+    </div>
+    <!--INTERACTIVE LOADER  -->
+    <div id="carregant">
+        <div id="loader" ></div><br><br>
+        <p id="myDiv"></p>
+    </div>
+</body>
+</html>
